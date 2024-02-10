@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>
+    MasDigta!!
+</title>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Sweet Alert -->
+<link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+<!-- Notyf -->
+<link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+<!-- Volt CSS -->
+<link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
+
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+<style>
+    /* Menambahkan gaya khusus untuk teks justify */
+    .text-justify {
+        text-align: justify;
+    }
+
+    .latar{
+        position: relative;
+        background-color: #262B40;
+        width: 260px;
+        height: 340px;
+        margin: 50px auto;
+        display: flex;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+
+    }
+
+    .latar h5{
+        color: #F8BD7A ;
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .latar::before{
+        content: 'MULAI';
+        position: absolute;
+        color: #F8BD7A ;
+        font-size: 2.5em;
+        font-weight: bold;
+        font-style: italic;
+        top: 30px;
+        left: -100px;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .latar:hover::before{
+        opacity: 0.5;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .latar::after{
+        content: 'BELAJAR';
+        position: absolute;
+        color: #F8BD7A ;
+        font-size: 2.5em;
+        font-weight: bold;
+        font-style: italic;
+        top: 210px;
+        left: 360px;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .latar:hover::after{
+        opacity: 0.5;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .latar .btn{
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: absolute;
+        background-color: #F8BD7A;
+        top: 280px;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .latar:hover .btn{
+        opacity: 1;
+    }
+
+    .titel{
+        color: #F8BD7A;
+        font-size: 3em;
+        font-style: italic;
+
+    }
+
+    .latar-img{
+        position: absolute;
+        max-width: auto;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 1s;
+    }
+
+    .latar:hover .latar-img{
+        transform: translate3d(-50%, -50%, 50px) scale(1.4);
+    }
+
+    .latar:hover .latar-btn{
+        transform: translate3d(-50%, -50%, 60px) scale(1.4);
+    }
+
+</style>
+</head>
+<header class="header-global">
+    <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
+        <div class="container position-relative">
+            <h1 class="titel">MasDigta!!!</h1>
+        </div>
+    </nav>
+</header>
+<body>
+    <section class="section-header overflow-hidden pt-7 pt-lg-8 pb-9 pb-lg-12 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center my-5">
+                    <a><i>"Masdigta, sebuah sistem inovatif yang mewakili 'Modul Ajar dan Asesmen Digital,' dirancang untuk memberikan pengalaman pembelajaran yang mulus dan komprehensif baik dalam lingkungan daring (online) maupun luring (offline). Sistem ini merupakan solusi terdepan untuk meningkatkan efektivitas dan aksesibilitas pembelajaran di berbagai konteks."</i></a>
+                </div>
+            </div>
+        </div>
+        <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="home-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4"><path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path></svg></figure>       
+        </section>
+        <section class="section section-sm pt-0 my-5">
+            <div class="row">
+                <div class="mb-5 col-12 col-md-4 mb-lg-0 pt-3">
+                    <div class="latar" data-tilt>
+                    <h5>Computational Thinking</h5>
+                    <img src="/static/assets/img/modul/ct.PNG" class="latar-img">
+                    <a href="#" class="btn latar-btn">Mulai</a>
+                    </div>
+                </div>
+                <div class="mb-5 col-12 col-md-4 mb-lg-0 pt-3">
+                    <div class="latar" data-tilt>
+                    <h5>Comming Soon!!!</h5>
+                    <img src="/static/assets/img/modul/cs.PNG"  class="latar-img">
+                    <a href="#" class="btn latar-btn">Mulai</a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+</body>

@@ -6,7 +6,7 @@ Copyright (c) 2019 - present AppSeed.us
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.template import loader
+from django.template import loader, TemplateDoesNotExist
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
