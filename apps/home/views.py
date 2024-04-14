@@ -10,6 +10,9 @@ from django.template import loader, TemplateDoesNotExist
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 # @login_required(login_url="/login/")
@@ -78,6 +81,58 @@ def delete_user(request, user_id):
     return user_view(request, {})
 
 
+#QUISS
+@csrf_exempt
+def quiz_submission(request):
+    if request.method == 'POST':
+        # Mengonversi data JSON yang diterima dari JavaScript menjadi dictionary
+        data = json.loads(request.body)
+        
+        # Di sini Anda dapat melakukan apa pun dengan data yang diterima
+        # Misalnya, menyimpan data ke dalam database atau melakukan pengolahan lainnya
+        
+        # Contoh: mencetak data yang diterima ke log
+        print(data)
+        
+        correction(data)
+        
+        # Mengirim respons ke JavaScript
+        response_data = {'message': 'Data berhasil diterima.'}
+        return JsonResponse(response_data)
+    else:
+        # Jika permintaan bukan metode POST, kembalikan respons dengan kode status 405 (Method Not Allowed)
+        return JsonResponse({'error': 'Metode yang diperbolehkan adalah POST.'}, status=405)
+    
+    
+def correction(jawaban):
+    kunci = {
+    "Jawaban Soal 1": "option1",
+    "Jawaban Soal 2": "option2",
+    "Jawaban Soal 3": "option2",
+    "Jawaban Soal 4": "option3",
+    "Jawaban Soal 5": "option1"
+    }
+    
+    skor = hitung_skor(kunci, jawaban)
+    hasil = buat_hasil(jawaban, skor)
+    
+    print(hasil)
+    
+def hitung_skor(kunci, jawaban):
+    skor = 0
+    for key in kunci:
+        if key in jawaban and jawaban[key] == kunci[key]:
+            skor += 20
+    return skor
+
+def buat_hasil(jawaban, skor):
+    hasil = {
+        "Nama": jawaban['Nama'],
+        "Grup": jawaban['Grup'],
+        "Skor": skor
+    }
+    return hasil
+    
 # @login_required(login_url="/login/")
 # def pages(request):
 #     context = {}

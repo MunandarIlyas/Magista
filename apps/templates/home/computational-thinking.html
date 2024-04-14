@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Example</title>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Sweet Alert -->
+    <link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Notyf -->
+    <link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
+    <style>
+        .titel{
+        color: #F8BD7A;
+        font-size: 3em;
+        font-style: italic;
+        }
+
+        .titel2{
+        color: #F8BD7A;
+        font-size: 2em;
+        font-style: italic;
+        }
+
+        .scrollable-div {
+          width: auto;
+          max-height: 400px;
+          overflow-y: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
+            <div class="container position-relative">
+                <h1 class="titel">MasDigta!!!</h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section-header overflow-hidden bg-primary text-white">
+            <div class="col-12 text-center my-5">
+                <h3 class="titel2">computational-thinking</h3>
+                <a><i><b>Apersepsi</b></i></a><br>
+                <a><i>Dapatkah kalian menyebutkan contoh-contoh kegiatan dalam kehidupan sehari-hari yang dibantu oleh komputer?</i></a><br>
+                <a><i><b>Kata Kunci</b></i></a><br>
+                <a><i>Berpikir komputasional, analisis masalah, penyelesaian persoalan, algoritma, representasi data, struktur data, pola, penjadwalan.</i></a><br>
+            </div>
+            <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="home-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4"><path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path></svg></figure>       
+        </section>
+        <section class="section section-sm pt-0 my-5">
+            <div class="container">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Apa Itu Berpikir Komputasional?
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Apakah kalian pernah memikirkan perbedaan antara pembuatan biskuit atau kue yang dibuat di rumah masing-masing dan biskuit dalam kemasan dengan merk tertentu yang dijual di warung atau di toko swalayan? Mari, kita lihat sekilas perbedaan proses pembuatan biskuit tersebut. </p>
+                            <p>Jika kalian mau membuat biskuit atau kue untuk anggota keluarga di rumah yang terdiri atas lima orang, kalian cukup membuat biskuit tersebut di dapur dengan peralatan yang ada di rumah. Lain halnya dengan beberapa ibu lain yang membuat biskuit dalam jumlah yang cukup banyak untuk dijual dan menjalankan Usaha Mikro Kecil Menengah (UMKM). Ibu-ibu tersebut tidak membuat kuenya di dapur rumah yang kecil dengan peralatan seadanya, melainkan mereka memerlukan tempat dan beberapa peralatan yang lebih canggih dibandingkan dengan peralatan yang kalian gunakan untuk membuat kue di rumah. Untuk menjalankan UMKM, membuat dan menjual biskuit, ibuibu mengerjakan pembuatan biskuit tersebut bersama-sama. Hal yang berbeda lagi terjadi pada proses pembuatan biskuit yang ditujukan untuk diproduksi secara masal dan dalam jumlah yang sangat besar. Biskuit tersebut dibuat dan dikemas dengan mesin di pabrik.</p>
+                            <p>Dari berbagai cara pembuatan biskuit tersebut, untuk menyelesaikan masalah yang cakupannya kecil, yaitu “membuat biskuit untuk lima orang”, cara penyelesaiannya berbeda dengan cakupan masalah yang menengah, yaitu untuk UMKM, dan berbeda pula untuk cakupan masalah besar, yaitu untuk diproduksi masal setiap hari. Dalam kasus tersebut, makin besar cakupan permasalahannya, bantuan mesin makin diperlukan. Di dalam mesin tersebut, terdapat berbagai komponen yang dirangkai sehingga dapat bekerja dengan cara yang mirip dengan manusia bekerja. Sederhananya, dalam topik ini, kita dapat menyebut rangkaian komponen-komponen tersebut sebagai “komputer”.</p>
+                            <p>Komputer banyak dipergunakan dalam kehidupan sehari-hari untuk mempermudah kehidupan, atau membantu penyelesaian berbagai permasalahan yang kita hadapi. Cara kerja komputer menyerupai cara kerja manusia. Pada proses pembuatan biskuit, dengan alat apa pun, tentunya tetap diperlukan bahan dasar tepung, margarin, dan bahan-bahan lainnya. Bahanbahan tersebut dicampur dan diproses lebih lanjut. </p>
+                            <p>Berpikir komputasional adalah cara berpikir untuk menyelesaikan persoalan, yang cara penyelesaiannya, jika dikembangkan, dapat dilakukan oleh komputer. Dengan demikian, kita akan belajar bagaimana menyelesaikan berbagai persoalan dengan cara yang efektif dan efisien. Istilah computational thinking atau berpikir komputasional pertama kali dikenalkan oleh Seymor Papert pada tahun 1980 dan 1996. Di tahun 2014, pemerintah Inggris memasukkan materi pemrograman ke dalam kurikulum sekolah dasar dan menengah, tujuannya bukan untuk mencetak pekerja software (programmer) secara massif tetapi untuk mengenalkan Computational thinking (CT) sejak dini kepada siswa. Pemerintah Inggris percaya Computational thinking (CT) dapat membuat siswa lebih cerdas dan membuat mereka lebih cepat memahami teknologi yang ada di sekitar mereka.</p>
+                            <p>Terdapat 4 fondasi berpikir komputasional :
+                                	Dekomposisi
+                                	Pengenalan Pola
+                                	Abstraksi
+                                	Penyusunan Algoritma
+                            </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Dekomposisi, Pengenalan pola, Abstraksi dan Algoritma 
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p><b>Dekomposisi</b></p>
+                            <p>kemampuan memecah data, proses atau masalah (kompleks) menjadi bagian-bagian yang lebih kecil yang terstruktur atau menjadi tugas-tugas yang mudah dikelola. Misalnya memilah ‘Drive/Direktori’ dalam sebuah komputer berdasarkan komponen penyusunnya: File dan Direktori.</p>
+                            <p><b>Pengenalan Pola</b></p>
+                            <p>kemampuan untuk melihat persamaan atau bahkan perbedaan pola, tren dan keteraturan dalam data yang nantinya akan digunakan dalam membuat prediksi dan penyajian data. Misalnya mengenali pola jenis file dari ekstensinya, seperti file sistem, file eksekusi, atau file data.</p>
+                            <p><b>Abstraksi</b></p>
+                            <p>melakukan generalisasi dan mengidentifikasi prinsip-prinsip umum yang menghasilkan pola, tren dan keteraturan tersebut. Misalnya dengan menempatkan semua file sistem di folder Windows, file program di folder Program Files, file dokumen di Folder My Document dan file pendukung di drive atau direktori terpisah.</p>
+                            <p><b>Algoritma</b></p>
+                            <p>mengembangkan petunjuk pemecahan masalah yang sama secara step-by-step, langkah demi langkah, tahapan demi tahapan sehingga orang lain dapat menggunakan langkah atau informasi tersebut untuk menyelesaikan permasalahan yang sama</p>
+                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Karakteristik Berpikir Komputasional Adalah
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Pengantar Karakteristik Berpikir Komputasional</p>
+                            <ol>
+                                <li>Mampu memberikan pemecahan masalah menggunakan komputer atau perangkat lain</li>
+                                <li>Mampu mengorganisasi dan menganalisis data</li>
+                                <li>Mampu melakukan representasi data melalui abstraksi dengan suatu model atau simulasi</li>
+                                <li>Mampu melakukan otomatisasi solusi melalui cara berpikir algoritma</li>
+                                <li>Mampu melakukan identifikasi, analisis, dan implementasi solusi dengan berbagai kombinasi langkah/cara dan sumber daya yang efisien dan efektif</li>
+                                <li>Mampu melakukan generalisasi solusi untuk berbagai masalah yang berbeda</li>
+                              </ol>
+                              <p>
+                                Soal-soal pada bab Berpikir Komputasional mencakup berbagai konsep Informatika. Tentunya, konsep-konsep tersebut tidak terbatas pada soal-soal yang disajikan pada materi Berpikir Komputasional pada jenjang kelas 7, 8, dan 9. Maka, peta konsep yang diberikan pada bab ini tidak dapat menggambarkan konsep Berpikir Komputasional secara keseluruhan, tetapi terbatas pada materi yang dibahas pada kelas 7.
+                              </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Pengembangan Kemampuan Berpikir Kritis melalui Computational Thinking
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <section>
+                                <h4>Pendahuluan</h4>
+                                <p>Dalam era digital yang semakin berkembang pesat, kemampuan berpikir kritis menjadi sangat penting bagi para siswa. Kemampuan ini tidak hanya membantu mereka dalam memahami dan menyelesaikan masalah, tetapi juga menjadi landasan yang kuat dalam mempelajari Computational Thinking (CT). CT adalah kemampuan untuk memecahkan masalah dengan menggunakan konsep-konsep dari dunia komputasi, termasuk pemodelan, abstraksi, dan algoritma. Dalam modul ini, kita akan menjelajahi bagaimana CT dapat digunakan sebagai alat untuk mengembangkan kemampuan berpikir kritis.</p>
+                            </section>
+                    
+                            <section>
+                                <h4>Konsep Dasar Berpikir Kritis</h4>
+                                <p>Definisi Berpikir Kritis: Pengenalan tentang apa itu berpikir kritis dan mengapa itu penting.</p>
+                                <ul>
+                                    <li>Elemen Berpikir Kritis:
+                                        <ul>
+                                            <li>Analisis</li>
+                                            <li>Evaluasi</li>
+                                            <li>Interpretasi</li>
+                                            <li>Pengambilan keputusan</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </section>
+                    
+                            <section>
+                                <h4>Pengenalan Computational Thinking (CT)</h4>
+                                <p>Definisi CT: Penjelasan singkat tentang apa itu Computational Thinking dan bagaimana hal itu berhubungan dengan berpikir kritis.</p>
+                                <ul>
+                                    <li>Konsep Dasar CT:
+                                        <ul>
+                                            <li>Algoritma</li>
+                                            <li>Abstraksi</li>
+                                            <li>Pemodelan</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              KUIS
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <div class="container mt-5">
+                                <div class="row justify-content-center">
+                                  <div class="col-md-6 scrollable-div">
+                                    <h4 class="mb-4">Data Diri</h4>
+                                    <form id="quizForm">
+                                      <div class="form-group">
+                                        <label for="namaGrup">Nama</label>
+                                        <input type="text" class="form-control" id="namaGrup" placeholder="Masukkan Nama Grup" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="namaGrup">Grup</label>
+                                        <input type="text" class="form-control" id="grup" placeholder="Masukkan Nama Grup" required>
+                                      </div>
+
+                                      <div class="container mt-5">
+                                          <div class="form-group">
+                                            <label for="question1">Soal 1</label>
+                                            <p>Apa yang dimaksud dengan "berpikir komputasional"?</p>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question1" id="question1a" value="option1" required>
+                                              <label class="form-check-label" for="question1a">
+                                                Berpikir komputasional memang mengacu pada cara berpikir untuk menyelesaikan persoalan dengan menggunakan prinsip-prinsip dan konsep-konsep yang digunakan dalam pemrograman komputer
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question1" id="question1b" value="option2" required>
+                                              <label class="form-check-label" for="question1b">
+                                                Cara berpikir yang hanya digunakan oleh programmer.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question1" id="question1c" value="option3" required>
+                                              <label class="form-check-label" for="question1c">
+                                                Cara berpikir yang tidak efektif dalam menyelesaikan persoalan.
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <hr>
+                                          <!-- Lanjutkan dengan soal-soal berikutnya -->
+                                          <!-- Contoh Soal 2 -->
+                                          <div class="form-group">
+                                            <label for="question2">Soal 2</label>
+                                            <p>Mana dari pernyataan berikut yang mencerminkan konsep "dekomposisi"?</p>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question2" id="question2a" value="option1" required>
+                                              <label class="form-check-label" for="question2a">
+                                                Mengidentifikasi pola jenis file dari ekstensinya.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question2" id="question2b" value="option2" required>
+                                              <label class="form-check-label" for="question2b">
+                                                Memecah tugas yang kompleks menjadi bagian-bagian yang lebih kecil dan terstruktur.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question2" id="question2c" value="option3" required>
+                                              <label class="form-check-label" for="question2c">
+                                                Mengembangkan algoritma langkah demi langkah untuk menyelesaikan masalah.
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <!-- Lanjutkan dengan soal-soal berikutnya -->
+                                          <!-- Contoh Soal 3 -->
+                                          <div class="form-group">
+                                            <label for="question3">Soal 3</label>
+                                            <p>Algoritma bertujuan untuk apa?</p>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question3" id="question3a" value="option1" required>
+                                              <label class="form-check-label" for="question3a">
+                                                Melihat persamaan atau perbedaan pola dalam data.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question3" id="question3b" value="option2" required>
+                                              <label class="form-check-label" for="question3b">
+                                                Mengembangkan petunjuk pemecahan masalah langkah demi langkah.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question3" id="question3c" value="option3" required>
+                                              <label class="form-check-label" for="question3c">
+                                                Memecah tugas kompleks menjadi bagian-bagian yang lebih kecil.
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <!-- Lanjutkan dengan soal-soal berikutnya -->
+                                          <!-- Contoh Soal 4 -->
+                                          <div class="form-group">
+                                            <label for="question4">Soal 4</label>
+                                            <p>Pengenalan pola digunakan untuk apa?
+                                            </p>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question4" id="question4a" value="option1" required>
+                                              <label class="form-check-label" for="question4a">
+                                                Mengidentifikasi prinsip-prinsip umum yang menghasilkan pola.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question4" id="question4b" value="option2" required>
+                                              <label class="form-check-label" for="question4b">
+                                                Memecah data atau masalah menjadi bagian-bagian yang lebih kecil.
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question4" id="question4c" value="option3" required>
+                                              <label class="form-check-label" for="question4c">
+                                                Melihat persamaan atau perbedaan pola dalam data untuk membuat prediksi.
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <!-- Lanjutkan dengan soal-soal berikutnya -->
+                                          <!-- Contoh Soal 5 -->
+                                          <div class="form-group">
+                                            <label for="question3">Soal 5</label>
+                                            <p>Apa yang dilakukan dalam abstraksi?</p>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question5" id="question5a" value="option1" required>
+                                              <label class="form-check-label" for="question5a">
+                                                Mengembangkan petunjuk pemecahan masalah langkah demi langkah.
+
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question5" id="question5b" value="option2" required>
+                                              <label class="form-check-label" for="question5b">
+                                                Melakukan generalisasi dan mengidentifikasi prinsip-prinsip umum dari pola yang ditemukan.
+
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="question5" id="question5c" value="option3" required>
+                                              <label class="form-check-label" for="question5c">
+                                                Memecah tugas kompleks menjadi tugas-tugas yang mudah dikelola.
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <!-- Lanjutkan dengan soal-soal berikutnya -->
+                                      </div>
+                                      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                  </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Quis JS -->
+    <script src="/static/assets/js/quiz.js"></script>
+</body>
+</html>
