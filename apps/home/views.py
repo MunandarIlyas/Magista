@@ -12,6 +12,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from apps.home.models import Quiz, Kelas
 import json
 
 
@@ -129,9 +130,37 @@ def buat_hasil(jawaban, skor):
     hasil = {
         "Nama": jawaban['Nama'],
         "Grup": jawaban['Grup'],
+        "jawaban_soal_1": jawaban['Jawaban Soal 1'],
+        "jawaban_soal_2": jawaban['Jawaban Soal 2'],
+        "jawaban_soal_3": jawaban['Jawaban Soal 3'],
+        "jawaban_soal_4": jawaban['Jawaban Soal 4'],
+        "jawaban_soal_5": jawaban['Jawaban Soal 5'],
         "Skor": skor
     }
+    
+    quiz = Quiz.objects.create(
+        nama=jawaban['Nama'],
+        grup=jawaban['Grup'],
+        jawaban_soal_1=jawaban['Jawaban Soal 1'],
+        jawaban_soal_2=jawaban['Jawaban Soal 2'],
+        jawaban_soal_3=jawaban['Jawaban Soal 3'],
+        jawaban_soal_4=jawaban['Jawaban Soal 4'],
+        jawaban_soal_5=jawaban['Jawaban Soal 5'],
+        skor=skor  # Contoh skor
+    )
+
     return hasil
+
+def kelas_list(request):
+    # Ambil semua objek Kelas dari database
+    kelas_objects = Kelas.objects.all()
+    
+    # Buat list yang berisi dictionary untuk setiap objek Kelas
+    kelas_data = [{'id': kelas.id, 'nama_kelas': kelas.nama_kelas} for kelas in kelas_objects]
+    
+    # Kirim data dalam bentuk JSON sebagai respons
+    return JsonResponse(kelas_data, safe=False)
+
     
 # @login_required(login_url="/login/")
 # def pages(request):

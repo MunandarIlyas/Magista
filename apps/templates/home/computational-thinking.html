@@ -31,7 +31,7 @@
 
         .scrollable-div {
           width: auto;
-          max-height: 400px;
+          max-height: 500px;
           overflow-y: auto;
         }
         
@@ -198,12 +198,18 @@
                                     <form id="quizForm">
                                       <div class="form-group">
                                         <label for="namaGrup">Nama</label>
-                                        <input type="text" class="form-control" id="namaGrup" placeholder="Masukkan Nama Grup" required>
+                                        <input type="text" class="form-control" id="namaGrup" placeholder="Masukkan Nama" required>
                                       </div>
+                                      <!-- <div class="form-group">
+                                        <label for="namaGrup">Kelas</label>
+                                        <input type="text" class="form-control" id="grup" placeholder="Masukkan Kelas" required>
+                                      </div> -->
                                       <div class="form-group">
-                                        <label for="namaGrup">Grup</label>
-                                        <input type="text" class="form-control" id="grup" placeholder="Masukkan Nama Grup" required>
-                                      </div>
+                                        <label for="namaGrup">Kelas</label>
+                                        <select class="form-control" id="kelasDropdown" required>
+                                            <option value="" selected disabled>Pilih Kelas</option>
+                                        </select>
+                                    </div>
 
                                       <div class="container mt-5">
                                           <div class="form-group">
@@ -338,12 +344,27 @@
                           </div>
                         </div>
                       </div>
-                      
+                      <script>
+                        // Ambil data dari endpoint
+                        fetch('/kelas_list/')
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log(data)
+                                // Isi dropdown dengan hasil dari endpoint
+                                const dropdown = document.getElementById('kelasDropdown');
+                                data.forEach(kelas => {
+                                    const option = document.createElement('option');
+                                    option.text = kelas.nama_kelas;
+                                    option.value = kelas.id; // Sesuaikan dengan nilai yang ingin Anda gunakan
+                                    dropdown.appendChild(option);
+                                });
+                            })
+                            .catch(error => console.error('Error:', error));
+                      </script>
 
                   </div>
             </div>
         </section>
-
     </main>
     <!-- Quis JS -->
     <script src="/static/assets/js/quiz.js"></script>
