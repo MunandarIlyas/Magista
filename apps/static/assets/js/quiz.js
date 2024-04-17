@@ -3,7 +3,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
     
     // Mendapatkan nilai dari input nama dan grup
     var nama = document.getElementById('namaGrup').value;
-    var grup = document.getElementById('grup').value;
+    var grup = document.getElementById('kelasDropdown').value;
     
     // Mendapatkan nilai jawaban dari setiap pertanyaan
     var jawaban1 = document.querySelector('input[name="question1"]:checked').value;
@@ -39,6 +39,10 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
             // Mengonversi respons dari server ke JSON
             var response = JSON.parse(xhr.responseText);
             console.log(response);
+
+            // Membuat elemen dengan ID 'donekuis' muncul setelah formulir dikirim
+            document.getElementById('donekuis').style.display = 'block';
+            document.getElementById('kuis').style.display = 'none';
         }
     };
     

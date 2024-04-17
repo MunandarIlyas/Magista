@@ -161,6 +161,33 @@ def kelas_list(request):
     # Kirim data dalam bentuk JSON sebagai respons
     return JsonResponse(kelas_data, safe=False)
 
+from django.http import JsonResponse
+from .models import Quiz
+
+def quiz_list(request):
+    # Ambil semua objek Quiz dari database
+    quiz_objects = Quiz.objects.all()
+    
+    # Buat list yang berisi dictionary untuk setiap objek Quiz
+    quiz_data = [
+        {
+            'id': quiz.id,
+            'nama': quiz.nama,
+            'grup': quiz.grup,
+            'jawaban_soal_1': quiz.jawaban_soal_1,
+            'jawaban_soal_2': quiz.jawaban_soal_2,
+            'jawaban_soal_3': quiz.jawaban_soal_3,
+            'jawaban_soal_4': quiz.jawaban_soal_4,
+            'jawaban_soal_5': quiz.jawaban_soal_5,
+            'skor': quiz.skor
+        } 
+        for quiz in quiz_objects
+    ]
+    
+    # Kirim data dalam bentuk JSON sebagai respons
+    return JsonResponse(quiz_data, safe=False)
+
+
     
 # @login_required(login_url="/login/")
 # def pages(request):
