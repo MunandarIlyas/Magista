@@ -34,7 +34,7 @@
 
         .scrollable-div {
           width: auto;
-          max-height: 500px;
+          max-height: 700px;
           overflow-y: auto;
         }
         
@@ -365,8 +365,108 @@
                         </div>
                         <div id="collapseEmpty" class="collapse" aria-labelledby="headingEmpty" data-parent="#accordionExample">
                             <div class="card-body">
+                              <div class="container">
+                                <div class="col-md-6 scrollable-div"> 
+                             
+                              <form id="evalForm">
+                                <table class="table table-bordered table-striped">
+                                  <tr>
+                                      <td>Topik:</td>
+                                      <td><p>Berpikir Komputasional</p></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Waktu:</td>
+                                      <td><p>25 Menit</p></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Nama:</td>
+                                      <td><input class="form-control" type="text" id="nama" name="nama"></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Kelas:</td>
+                                      <td>
+                                        <select class="form-control" id="kelasDropdown2" required>
+                                            <option value="" selected disabled>Pilih Kelas</option>
+                                        </select>
+                                      </td>
+                                  </tr>
+                              </table>
+                              <br><br>
+
+
+                                <h3>Soal No 1</h3>
+                                <p>Pustakawan ingin mengurutkan nomor dari sekumpulan ensiklopedia dengan langkah sesedikit mungkin. Untuk satu langkah, dia mengambil sebuah buku, menggeser sisanya ke kiri atau ke kanan dan menaruh buku yang diambil ke ruang yang terbentuk.</p>
+                                <p>Contoh berikut mengurutkan 5 buku hanya dengan 1 langkah.</p>
+                                <p>Soal Bebras (2010-EE-03)</p>
+                                <img src="/static/assets/img/evaluasi/Picture1.PNG" alt="image"><br><br><br>
+                                <p>Sekarang ia harus mengurut 9 buku ini untuk menjadi urut:</p>
+                                <img src="/static/assets/img/evaluasi/Picture2.PNG" alt="image"><br><br><br>
+                                <h5>Pertanyaan</h5>
+                                <p>Jelaskan Berapa langkah minimum untuk mengurut seluruh 9 buku ?</p>
+                                <textarea id="jawaban1" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
+                                <h3>Soal No 2</h3>
+                                <p>Suatu ketika ada 9 anak yang diminta ibu guru berkumpul berdiri berjajar di lapangan. Mereka sangat antusias sehingga berebut untuk berada persis di depan ibu guru yang berada di tengah lapangan. Djoko dan Ella sangat ngefans dengan ibu guru. Djoko berlari gesit sehingga berhasil berada persis di depan ibu guru, dan Ella yang tampak gusar rela bergeser ke sebelah kanan Djoko. Lalu ada si Erik yang satu kampung dengan Ella yang langsung berdiri diantara Ella dan Tedjo. Sedangkan Zuzy yang merupakan ketua kelas berada di posisi paling kanan. Kemudian ada Trio Kwok kwok yaitu Supry, Gugun dan Jhon secara berurutan berada di sebelah kiri Djoko. Thuti yang datang terlambat segera memasuki barisan paling ujung. Kemudian ibu guru meminta seluruh siswi perempuan yaitu Ella, Zuzy dan Thuti untuk berdiri berdekatan.</p>
+
+                                <h5>Pertanyaan</h5>
+                                <p>Ada berapa proses pertukaran posisi minimum yang terjadi pada soal di atas dan JELASKAN!</p>
+                                <textarea id="jawaban2" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
                                 
+                                <h3>Soal No 3</h3>
+                                <p>Sepuluh siswa sedang bekerja untuk menerbitkan majalah dinding sekolah. Setiap hari Jumat, mereka menulis dan memperbaiki artikel majalah dinding. Sebagian pekerjaan membuat majalah dinding membutuhkan komputer. Pada tabel di bawah, sel yang berwarna menunjukkan bahwa seorang siswa membutuhkan komputer. Pada satu jam yang sama, satu komputer hanya dapat digunakan oleh seorang siswa.</p>
+                                <img src="/static/assets/img/evaluasi/Picture3.PNG" alt="image"><br><br><br>
+                                <h5>Pertanyaan</h5>
+                                <p>Berapa jumlah minimum komputer yang dibutuhkan supaya mereka dapat bekerja sesuai dengan tabel di atas?</p>
+                                <textarea id="jawaban3" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
+                                
+                                <h3>Soal No 4</h3>
+                                <p>Terdapat 12 tempat untuk parkir mobil di area parkir. Setiap tempat diberi nomor. Gambar di bawah ini menunjukkan kondisi area parkir pada hari Senin dan pada hari Selasa. </p>
+                                <img src="/static/assets/img/evaluasi/Picture4.PNG" alt="image"><br><br><br>
+                                <p>Mobil yang parkir (pada hari Senin maupun Selasa) pasti akan parkir di tempat yang tergambar.</p>
+                                <h5>Pertanyaan</h5>
+
+                                <p>Berapa banyak tempat parkir yang tidak pernah terisi mobil pada hari Senin maupun hari Selasa? JELASKAN</p>
+                                <textarea id="jawaban4" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
+
+                                <h3>Soal No 5</h3>
+                                <p>Ari mempunyai jalanan di halamannya yang cukup panjang. Tetangganya dapat parkir di jalan tersebut, namun hanya bisa mundur untuk keluar sebab jalannya sempit. Karena ia hanya memiliki sebuah mobil, tetangga minta izin untuk ikut parkir di jalan tersebut. Supaya yakin tidak ada yang terblokir, ia membuat tabel kapan tetangga boleh parkir, dan kapan harus pergi. </p>
+                                <img src="/static/assets/img/evaluasi/Picture5.PNG" alt="image"><br><br>
+                                <p>Setiap pagi, mobil yang akan pergi harus keluar sebelum mobil lainnya masuk. Ari parkir duluan, kemudian Bob parkir setelah Ari. Seperti dapat dilihat pada tabel, tak ada yang meninggalkan jalan pada hari Senin.  </p>
+                                <img src="/static/assets/img/evaluasi/Picture7.PNG" alt="image"><br><br>
+                                <h5>Pertanyaan</h5>
+                                <p>Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat? JELASKAN</p>
+                                <textarea id="jawaban5" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
+                                <h3>Soal No 6</h3>
+                                <p>Sejumlah karung diletakkan di koridor, di dekat suatu lift (elevator). Koridor sangat sempit sehingga karung-karung harus dibariskan satu-satu. Dengan lift tersebut, karung-karung hendak dikirimkan ke toko di lantai dasar. Sekali angkut, Lift hanya dapat mengangkut karung-karung dengan total berat tidak kurang dari 80 kg dan tidak lebih dari 100 kg. Setelah terkirim maka lift akan kembali ke lantai tersebut.</p>
+                                <img src="/static/assets/img/evaluasi/Picture6.PNG" alt="image"><br><br>
+                                <p>Saat memasukkan karung-karung ke dalam lift, karung yang terdekat dengan lift yang akan diambil terlebih dulu. Seandainya penambahan suatu karung dapat menyebabkan overload (terlalu berat, karena total beratnya lebih dari 100 kg), karung itu untuk sementara tidak dimasukkan ke dalam lift tapi ditaruh di koridor pada arah berlawanan dari semula sejauh-jauhnya (jika tidak overload tentu akan dimasukkan ke dalam lift!).</p>
+                                <p>Bila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.</p>
+                                <h5>Pertanyaan</h5>
+                                <p>Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung? JELASKAN</p>
+                                <textarea id="jawaban6" class="form-control" rows="5" required>
+
+                                </textarea>
+                                <br>
+
+                                <button type="submit" class="btn btn-primary mt-3">SUBMIT</button>
                                 <!-- Konten Kosong -->
+                              </form>
+                            </div>
+                          </div>
                             </div>
                         </div>
                     </div>                    
@@ -430,6 +530,14 @@
                   option.text = kelas.nama_kelas;
                   option.value = kelas.id; // Sesuaikan dengan nilai yang ingin Anda gunakan
                   dropdown.appendChild(option);
+              });
+
+              const dropdown2 = document.getElementById('kelasDropdown2');
+              data.forEach(kelas => {
+                  const option = document.createElement('option');
+                  option.text = kelas.nama_kelas;
+                  option.value = kelas.id; // Sesuaikan dengan nilai yang ingin Anda gunakan
+                  dropdown2.appendChild(option);
               });
           })
           .catch(error => console.error('Error:', error));
