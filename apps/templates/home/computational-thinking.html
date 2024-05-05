@@ -8,6 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <!-- Sweet Alert -->
     <link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 
@@ -70,6 +73,7 @@
                   
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
+                          <img src="/static/assets/img/modul/gambar1.PNG" class="img-fluid rounded-circle" alt="Responsive image"><br><br><br>
                             <p>Apakah kalian pernah memikirkan perbedaan antara pembuatan biskuit atau kue yang dibuat di rumah masing-masing dan biskuit dalam kemasan dengan merk tertentu yang dijual di warung atau di toko swalayan? Mari, kita lihat sekilas perbedaan proses pembuatan biskuit tersebut. </p>
                             <p>Jika kalian mau membuat biskuit atau kue untuk anggota keluarga di rumah yang terdiri atas lima orang, kalian cukup membuat biskuit tersebut di dapur dengan peralatan yang ada di rumah. Lain halnya dengan beberapa ibu lain yang membuat biskuit dalam jumlah yang cukup banyak untuk dijual dan menjalankan Usaha Mikro Kecil Menengah (UMKM). Ibu-ibu tersebut tidak membuat kuenya di dapur rumah yang kecil dengan peralatan seadanya, melainkan mereka memerlukan tempat dan beberapa peralatan yang lebih canggih dibandingkan dengan peralatan yang kalian gunakan untuk membuat kue di rumah. Untuk menjalankan UMKM, membuat dan menjual biskuit, ibuibu mengerjakan pembuatan biskuit tersebut bersama-sama. Hal yang berbeda lagi terjadi pada proses pembuatan biskuit yang ditujukan untuk diproduksi secara masal dan dalam jumlah yang sangat besar. Biskuit tersebut dibuat dan dikemas dengan mesin di pabrik.</p>
                             <p>Dari berbagai cara pembuatan biskuit tersebut, untuk menyelesaikan masalah yang cakupannya kecil, yaitu “membuat biskuit untuk lima orang”, cara penyelesaiannya berbeda dengan cakupan masalah yang menengah, yaitu untuk UMKM, dan berbeda pula untuk cakupan masalah besar, yaitu untuk diproduksi masal setiap hari. Dalam kasus tersebut, makin besar cakupan permasalahannya, bantuan mesin makin diperlukan. Di dalam mesin tersebut, terdapat berbagai komponen yang dirangkai sehingga dapat bekerja dengan cara yang mirip dengan manusia bekerja. Sederhananya, dalam topik ini, kita dapat menyebut rangkaian komponen-komponen tersebut sebagai “komputer”.</p>
@@ -96,12 +100,14 @@
                       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <p><b>Dekomposisi</b></p>
+                            <img src="/static/assets/img/modul/gambar2.PNG" class="img-fluid rounded-circle" alt="image"><br><br><br>
                             <p>kemampuan memecah data, proses atau masalah (kompleks) menjadi bagian-bagian yang lebih kecil yang terstruktur atau menjadi tugas-tugas yang mudah dikelola. Misalnya memilah ‘Drive/Direktori’ dalam sebuah komputer berdasarkan komponen penyusunnya: File dan Direktori.</p>
                             <p><b>Pengenalan Pola</b></p>
                             <p>kemampuan untuk melihat persamaan atau bahkan perbedaan pola, tren dan keteraturan dalam data yang nantinya akan digunakan dalam membuat prediksi dan penyajian data. Misalnya mengenali pola jenis file dari ekstensinya, seperti file sistem, file eksekusi, atau file data.</p>
                             <p><b>Abstraksi</b></p>
                             <p>melakukan generalisasi dan mengidentifikasi prinsip-prinsip umum yang menghasilkan pola, tren dan keteraturan tersebut. Misalnya dengan menempatkan semua file sistem di folder Windows, file program di folder Program Files, file dokumen di Folder My Document dan file pendukung di drive atau direktori terpisah.</p>
                             <p><b>Algoritma</b></p>
+                            <img src="/static/assets/img/modul/gambar3.PNG" class="img-fluid" style="max-width: 200px;" alt="image"><br><br><br>
                             <p>mengembangkan petunjuk pemecahan masalah yang sama secara step-by-step, langkah demi langkah, tahapan demi tahapan sehingga orang lain dapat menggunakan langkah atau informasi tersebut untuk menyelesaikan permasalahan yang sama</p>
                         
                         </div>
@@ -349,29 +355,84 @@
                         </div>
                         </div>
                       </div>
-                      <script>
-                        // Ambil data dari endpoint
-                        fetch('/kelas_list/')
-                            .then(response => response.json())
-                            .then(data => {
-                                console.log(data)
-                                // Isi dropdown dengan hasil dari endpoint
-                                const dropdown = document.getElementById('kelasDropdown');
-                                data.forEach(kelas => {
-                                    const option = document.createElement('option');
-                                    option.text = kelas.nama_kelas;
-                                    option.value = kelas.id; // Sesuaikan dengan nilai yang ingin Anda gunakan
-                                    dropdown.appendChild(option);
-                                });
-                            })
-                            .catch(error => console.error('Error:', error));
-                      </script>
-
+                      <div class="card">
+                        <div class="card-header" id="headingEmpty">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEmpty" aria-expanded="false" aria-controls="collapseEmpty">
+                                    Evaluasi Kompetensi
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEmpty" class="collapse" aria-labelledby="headingEmpty" data-parent="#accordionExample">
+                            <div class="card-body">
+                                
+                                <!-- Konten Kosong -->
+                            </div>
+                        </div>
+                    </div>                    
+                      <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Video Edukasi Computational Thinking
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="container-fluid">
+                                <section>
+                                    <h4>Mari kita saksikan video pembelajaran berikut!!!</h4>
+                                    <p>Pengenalan Computational Thinking | Berpikir Komputasional</p>
+                                    <video
+                                      id="my-video"
+                                      class="video-js"
+                                      controls
+                                      preload="auto"
+                                      width="640"
+                                      height="264"
+                                      poster="/static/assets/img/modul/gambar1.PNG"
+                                      data-setup="{}"
+                                    >
+                                      <source src="/static/assets/video/ct.mp4" type="video/mp4" />
+                                      <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                          >supports HTML5 video</a
+                                        >
+                                      </p>
+                                    </video>
+                                    <br><br>
+                                    <a href="https://youtu.be/jCb9fpPrxLc?si=IxqGe0xmK9Ipdkpz">https://youtu.be/jCb9fpPrxLc?si=IxqGe0xmK9Ipdkpz</a>
+                                  </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
                   </div>
             </div>
         </section>
     </main>
     <!-- Quis JS -->
     <script src="/static/assets/js/quiz.js"></script>
+    
+    <script>
+      // Ambil data dari endpoint
+      fetch('/kelas_list/')
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+              // Isi dropdown dengan hasil dari endpoint
+              const dropdown = document.getElementById('kelasDropdown');
+              data.forEach(kelas => {
+                  const option = document.createElement('option');
+                  option.text = kelas.nama_kelas;
+                  option.value = kelas.id; // Sesuaikan dengan nilai yang ingin Anda gunakan
+                  dropdown.appendChild(option);
+              });
+          })
+          .catch(error => console.error('Error:', error));
+    </script>
 </body>
 </html>

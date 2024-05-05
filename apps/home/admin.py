@@ -4,7 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.contrib import admin
-from apps.home.models import Quiz, Kelas
+from apps.home.models import Quiz, Kelas, Evaluasi
 
 # Register your models here.
 
@@ -14,3 +14,5 @@ class QuizAdmin(admin.ModelAdmin):
 admin.site.register(Quiz, QuizAdmin)    
 
 admin.site.register(Kelas)
+
+admin.site.register(Evaluasi)

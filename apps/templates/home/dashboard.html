@@ -141,11 +141,11 @@
                                 <h2 class="h6 text-gray-400 mb-0">Siswa Mengikuti Kuis</h2>
                                 <h3 class="fw-extrabold mb-2" id="jumlah_siswa">Banyaknya</h3>
                             </div>
-                            <small class="text-gray-500">
+                            <!-- <small class="text-gray-500">
                                 Feb 1 - Apr 1
-                            </small> 
+                            </small>  -->
                             <div class="small d-flex mt-1">                               
-                                <div>Since last month <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg><span class="text-success fw-bolder">4%</span></div>
+                                <div>Telah menngikuti Kuis</div>
                             </div>
                         </div>
                     </div>
@@ -159,17 +159,30 @@
                 <div class="col-12 mb-4">
                     <div class="card border-0 shadow">
                         <div class="card-header">
-                            <div class="row align-items-center">
+                            <!-- <div class="row align-items-center">
                                 <div class="col">
                                     <h2 class="fs-5 fw-bold mb-0">Page visits</h2>
                                 </div>
                                 <div class="col text-end">
                                     <a href="#" class="btn btn-sm btn-primary">See all</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="table-responsive">
-                            <table class="table align-items-center table-flush">
+                            <table id="quizTable" class="display">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nama</th>
+                                        <th>Grup</th>
+                                        <th>Skor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data dari API akan ditampilkan di sini -->
+                                </tbody>
+                            </table>
+                            <!-- <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                 <tr>
                                     <th class="border-bottom" scope="col">Page name</th>
@@ -265,7 +278,7 @@
                                     </td>
                                 </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         </div>
                     </div>
                 </div>
@@ -575,39 +588,60 @@
         </div>
     </div>
 
-    <script>
-        // Ambil data dari endpoint
-        fetch('/kelas_list/')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                
-                // Menghitung banyak kelas
-                const jumlahKelas = data.length;
-                console.log("Jumlah kelas:", jumlahKelas);
-
-                document.getElementById('jumlah_kelas').innerHTML = jumlahKelas;
     
-            })
-            .catch(error => console.error('Error:', error));
-
-        fetch('/quiz_list/')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                
-                // Menghitung banyak kelas
-                const jumlah = data.length;
-                console.log("Jumlah Siswa Menjawab:", jumlah);
-
-                document.getElementById('jumlah_siswa').innerHTML = jumlah;
-
-                
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
-
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>  
+    // Ambil data dari endpoint
+    fetch('/kelas_list/')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            
+            // Menghitung banyak kelas
+            const jumlahKelas = data.length;
+            console.log("Jumlah kelas:", jumlahKelas);
+
+            document.getElementById('jumlah_kelas').innerHTML = jumlahKelas;
+
+        })
+        .catch(error => console.error('Error:', error));
+
+    fetch('/quiz_list/')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            
+            // Menghitung banyak kelas
+            const jumlah = data.length;
+            console.log("Jumlah Siswa Menjawab:", jumlah);
+
+            document.getElementById('jumlah_siswa').innerHTML = jumlah;
+
+            // Mendapatkan referensi tabel
+            const tableBody = document.querySelector('#quizTable tbody');
+            
+            data.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.id}</td>
+                        <td>${item.nama}</td>
+                        <td>${item.grup}</td>
+                        <td>${item.skor}</td>
+                        <!-- Tambahkan kolom lain jika diperlukan -->
+                    `;
+                    tableBody.appendChild(row);
+                });
+
+                // Inisialisasi DataTables
+                $('#quizTable').DataTable();
+
+            
+        })
+        // Inisialisasi DataTables
+        // $('#quizTable').DataTable();
+        .catch(error => console.error('Error:', error));
+</script>
+{% endblock javascripts %}

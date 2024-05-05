@@ -13,6 +13,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from apps.home.models import Quiz, Kelas
+from .forms import EvaluasiForm
 import json
 
 
@@ -31,6 +32,11 @@ def pages(request):
 
         if load_template == 'admin':
             return HttpResponseRedirect(reverse('admin:index'))
+        
+        
+        if load_template == 'computational-thinking.html':
+            form = EvaluasiForm()
+            return render(request, 'home/computational-thinking.html', {'form': form})
         
         context['segment'] = load_template
 
@@ -173,7 +179,7 @@ def quiz_list(request):
         {
             'id': quiz.id,
             'nama': quiz.nama,
-            'grup': quiz.grup,
+            'grup': quiz.grup.nama_kelas,  # Mengambil nama_kelas dari objek Kelas
             'jawaban_soal_1': quiz.jawaban_soal_1,
             'jawaban_soal_2': quiz.jawaban_soal_2,
             'jawaban_soal_3': quiz.jawaban_soal_3,
@@ -186,6 +192,7 @@ def quiz_list(request):
     
     # Kirim data dalam bentuk JSON sebagai respons
     return JsonResponse(quiz_data, safe=False)
+
 
 
     
