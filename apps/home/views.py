@@ -133,9 +133,15 @@ def hitung_skor(kunci, jawaban):
     return skor
 
 def buat_hasil(jawaban, skor):
+    # Find the Kelas instance by its primary key
+    try:
+        grup_instance = Kelas.objects.get(id=jawaban['Grup'])
+    except Kelas.DoesNotExist:
+        return {"error": "Grup with the provided ID does not exist."}
+    
     hasil = {
         "Nama": jawaban['Nama'],
-        "Grup": jawaban['Grup'],
+        "Grup": grup_instance.nama_kelas,
         "jawaban_soal_1": jawaban['Jawaban Soal 1'],
         "jawaban_soal_2": jawaban['Jawaban Soal 2'],
         "jawaban_soal_3": jawaban['Jawaban Soal 3'],
@@ -146,7 +152,7 @@ def buat_hasil(jawaban, skor):
     
     quiz = Quiz.objects.create(
         nama=jawaban['Nama'],
-        grup=jawaban['Grup'],
+        grup=grup_instance,
         jawaban_soal_1=jawaban['Jawaban Soal 1'],
         jawaban_soal_2=jawaban['Jawaban Soal 2'],
         jawaban_soal_3=jawaban['Jawaban Soal 3'],
