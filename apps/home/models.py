@@ -47,3 +47,23 @@ class Evaluasi(models.Model):
 
     def __str__(self):
         return self.nama
+    
+class Eval(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    nama = models.CharField(max_length=100)
+    kelas = models.ForeignKey(Kelas, on_delete=models.CASCADE)
+    jawaban1 = models.TextField()
+    skor1 = models.IntegerField(default=0)
+    jawaban2 = models.TextField()
+    skor2 = models.IntegerField(default=0)
+    jawaban3 = models.TextField()
+    skor3 = models.IntegerField(default=0)
+    jawaban4 = models.TextField()
+    skor4 = models.IntegerField(default=0)
+    jawaban5 = models.TextField()
+    skor5 = models.IntegerField(default=0)
+    jawaban6 = models.TextField()
+    skor6 = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.nama

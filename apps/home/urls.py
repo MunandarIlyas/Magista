@@ -13,6 +13,7 @@ urlpatterns = [
     path('get_user_data/<int:user_id>/', views.get_user_data_view, name='get_user_data'),
     path('delete_user/<int:user_id>/', views.delete_user, name='delete_user'),
     path('quiz_submission/', views.quiz_submission, name='quiz_submission'),
+    path('eval_submission/', views.eval_submission, name='eval_submission'),
     path('kelas_list/', views.kelas_list, name='kelas-list'),
     path('quiz_list/', views.quiz_list, name='quiz_list'),
     # Matches any html file

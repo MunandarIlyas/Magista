@@ -87,6 +87,31 @@ def delete_user(request, user_id):
     user.delete()
     return user_view(request, {})
 
+#EVALLL
+@csrf_exempt
+def eval_submission(request):
+    if request.method == 'POST':
+        # Mengonversi data JSON yang diterima dari JavaScript menjadi dictionary
+        data = json.loads(request.body)
+        
+        # Di sini Anda dapat melakukan apa pun dengan data yang diterima
+        # Misalnya, menyimpan data ke dalam database atau melakukan pengolahan lainnya
+        
+        # Contoh: mencetak data yang diterima ke log
+        print(data)
+        
+        save_eval_data(data)
+        
+        # Mengirim respons ke JavaScript
+        response_data = {'message': 'Data evaluasi berhasil diterima.'}
+        return JsonResponse(response_data)
+    else:
+        # Jika permintaan bukan metode POST, kembalikan respons dengan kode status 405 (Method Not Allowed)
+        return JsonResponse({'error': 'Metode yang diperbolehkan adalah POST.'}, status=405)
+    
+def save_eval_data(jawaban):
+    print(jawaban)
+
 
 #QUISS
 @csrf_exempt

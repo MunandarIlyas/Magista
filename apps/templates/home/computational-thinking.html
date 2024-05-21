@@ -37,14 +37,52 @@
           max-height: 700px;
           overflow-y: auto;
         }
+
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .img-container img {
+            max-width: 48%;  /* Adjust the width as necessary */
+            height: auto;
+        }
         
     </style>
 </head>
 <body>
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
-            <div class="container position-relative">
-                <h1 class="titel">MasDigta!!!</h1>
+              <div class="container position-relative">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation" style="z-index: 1051;">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse mt-5" id="navbar_global" style="background-color: #1f2937;">   
+                  <ul class="navbar-nav">
+                      <li class="nav-item me-2">
+                          <i><a href="/index.html" class="nav-link title">MasDigta!!!</a></i>
+                      </li>
+                      <li class="nav-item me-2">
+                          <a href="/dashboard.html" class="nav-link">Dashboard</a>
+                      </li>
+                      <li class="nav-item me-2">
+                          <a href="/modul.html" class="nav-link">Modul</a>
+                      </li>
+                      <!-- <li class="nav-item me-2">
+                          <a href="/page-sign-in.html" class="nav-link">Login</a>
+                      </li> -->
+                      <!-- <li class="nav-item me-2">
+                          <a href="/page-sign-up.html" class="nav-link">Register</a>
+                      </li> -->
+                  </ul>
+                  <div class="d-flex align-items-center ms-auto">
+                      <a href="/about-me.html"
+                        class="btn btn-outline-white d-inline-flex align-items-center me-md-3">
+                          <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+                          About Me
+                      </a>
+                  </div>
+              </div>
             </div>
         </nav>
     </header>
@@ -73,8 +111,10 @@
                   
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                          <img src="/static/assets/img/modul/gambar1.png" class="img-fluid rounded-circle" alt="Responsive image"><br><br><br>
-                            <p>Apakah kalian pernah memikirkan perbedaan antara pembuatan biskuit atau kue yang dibuat di rumah masing-masing dan biskuit dalam kemasan dengan merk tertentu yang dijual di warung atau di toko swalayan? Mari, kita lihat sekilas perbedaan proses pembuatan biskuit tersebut. </p>
+                          <div class="img-container">
+                            <img src="/static/assets/img/modul/2 Peta Konsep.png" class="img-fluid text-center" alt="Responsive image"><br>
+                          </div>
+                          <p>Apakah kalian pernah memikirkan perbedaan antara pembuatan biskuit atau kue yang dibuat di rumah masing-masing dan biskuit dalam kemasan dengan merk tertentu yang dijual di warung atau di toko swalayan? Mari, kita lihat sekilas perbedaan proses pembuatan biskuit tersebut. </p>
                             <p>Jika kalian mau membuat biskuit atau kue untuk anggota keluarga di rumah yang terdiri atas lima orang, kalian cukup membuat biskuit tersebut di dapur dengan peralatan yang ada di rumah. Lain halnya dengan beberapa ibu lain yang membuat biskuit dalam jumlah yang cukup banyak untuk dijual dan menjalankan Usaha Mikro Kecil Menengah (UMKM). Ibu-ibu tersebut tidak membuat kuenya di dapur rumah yang kecil dengan peralatan seadanya, melainkan mereka memerlukan tempat dan beberapa peralatan yang lebih canggih dibandingkan dengan peralatan yang kalian gunakan untuk membuat kue di rumah. Untuk menjalankan UMKM, membuat dan menjual biskuit, ibuibu mengerjakan pembuatan biskuit tersebut bersama-sama. Hal yang berbeda lagi terjadi pada proses pembuatan biskuit yang ditujukan untuk diproduksi secara masal dan dalam jumlah yang sangat besar. Biskuit tersebut dibuat dan dikemas dengan mesin di pabrik.</p>
                             <p>Dari berbagai cara pembuatan biskuit tersebut, untuk menyelesaikan masalah yang cakupannya kecil, yaitu “membuat biskuit untuk lima orang”, cara penyelesaiannya berbeda dengan cakupan masalah yang menengah, yaitu untuk UMKM, dan berbeda pula untuk cakupan masalah besar, yaitu untuk diproduksi masal setiap hari. Dalam kasus tersebut, makin besar cakupan permasalahannya, bantuan mesin makin diperlukan. Di dalam mesin tersebut, terdapat berbagai komponen yang dirangkai sehingga dapat bekerja dengan cara yang mirip dengan manusia bekerja. Sederhananya, dalam topik ini, kita dapat menyebut rangkaian komponen-komponen tersebut sebagai “komputer”.</p>
                             <p>Komputer banyak dipergunakan dalam kehidupan sehari-hari untuk mempermudah kehidupan, atau membantu penyelesaian berbagai permasalahan yang kita hadapi. Cara kerja komputer menyerupai cara kerja manusia. Pada proses pembuatan biskuit, dengan alat apa pun, tentunya tetap diperlukan bahan dasar tepung, margarin, dan bahan-bahan lainnya. Bahanbahan tersebut dicampur dan diproses lebih lanjut. </p>
@@ -142,50 +182,138 @@
                         <div class="card-header" id="headingFour">
                           <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Pengembangan Kemampuan Berpikir Kritis melalui Computational Thinking
+                              Studi Kasus Berpikir Komputasional
                             </button>
                           </h2>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                           <div class="card-body">
-                            <section>
-                                <h4>Pendahuluan</h4>
-                                <p>Dalam era digital yang semakin berkembang pesat, kemampuan berpikir kritis menjadi sangat penting bagi para siswa. Kemampuan ini tidak hanya membantu mereka dalam memahami dan menyelesaikan masalah, tetapi juga menjadi landasan yang kuat dalam mempelajari Computational Thinking (CT). CT adalah kemampuan untuk memecahkan masalah dengan menggunakan konsep-konsep dari dunia komputasi, termasuk pemodelan, abstraksi, dan algoritma. Dalam modul ini, kita akan menjelajahi bagaimana CT dapat digunakan sebagai alat untuk mengembangkan kemampuan berpikir kritis.</p>
-                            </section>
-                    
-                            <section>
-                                <h4>Konsep Dasar Berpikir Kritis</h4>
-                                <p>Definisi Berpikir Kritis: Pengenalan tentang apa itu berpikir kritis dan mengapa itu penting.</p>
-                                <ul>
-                                    <li>Elemen Berpikir Kritis:
-                                        <ul>
-                                            <li>Analisis</li>
-                                            <li>Evaluasi</li>
-                                            <li>Interpretasi</li>
-                                            <li>Pengambilan keputusan</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </section>
-                    
-                            <section>
-                                <h4>Pengenalan Computational Thinking (CT)</h4>
-                                <p>Definisi CT: Penjelasan singkat tentang apa itu Computational Thinking dan bagaimana hal itu berhubungan dengan berpikir kritis.</p>
-                                <ul>
-                                    <li>Konsep Dasar CT:
-                                        <ul>
-                                            <li>Algoritma</li>
-                                            <li>Abstraksi</li>
-                                            <li>Pemodelan</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </section>
-
+                            <p>
+                              Apakah kalian pernah memikirkan perbedaan antara pembuatan biskuit atau kue yang dibuat di rumah masing-masing dan biskuit dalam kemasan dengan merk tertentu yang dijual di warung atau di toko swalayan? Mari, kita lihat sekilas perbedaan proses pembuatan biskuit tersebut.
+                          </p>
+                          <p>
+                              Jika kalian mau membuat biskuit atau kue untuk anggota keluarga di rumah yang terdiri atas lima orang, kalian cukup membuat biskuit tersebut di dapur dengan peralatan yang ada di rumah.
+                          </p>
+                          <p>
+                              Lain halnya dengan beberapa ibu lain yang membuat biskuit dalam jumlah yang cukup banyak untuk dijual dan menjalankan Usaha Mikro Kecil Menengah (UMKM). Ibu-ibu tersebut tidak membuat kuenya di dapur rumah yang kecil dengan peralatan seadanya, melainkan mereka memerlukan tempat dan beberapa peralatan yang lebih canggih dibandingkan dengan peralatan yang kalian gunakan untuk membuat kue di rumah. Untuk menjalankan UMKM, membuat dan menjual biskuit, ibu-ibu mengerjakan pembuatan biskuit tersebut bersama-sama.
+                          </p>
+                          <p>
+                              Hal yang berbeda lagi terjadi pada proses pembuatan biskuit yang ditujukan untuk diproduksi secara masal dan dalam jumlah yang sangat besar. Biskuit tersebut dibuat dan dikemas dengan mesin di pabrik.
+                          </p>
+                              <br>
+                                <div class="img-container">
+                                    <img src="/static/assets/img/modul/3 Anak membuat kue di rumah.png" class="img-fluid" alt="Gambar 2.3">
+                                    <img src="/static/assets/img/modul/4 ibu membuat kue untuk UMKM.png" class="img-fluid" alt="Gambar 2.4">
+                                </div>
+                                <br>
+                                <div class="img-container">
+                                  
+                                  <img src="/static/assets/img/modul/5 Mesin Pembuat Kue di Pabrik kue.png" class="img-fluid" alt="Gambar 2.4">
+                                </div>
+                                <br>
                             
+                                <p>
+                                  Dari berbagai cara pembuatan biskuit tersebut, untuk menyelesaikan masalah yang cakupannya kecil, yaitu “membuat biskuit untuk lima orang”, cara penyelesaiannya berbeda dengan cakupan masalah yang menengah, yaitu untuk UMKM, dan berbeda pula untuk cakupan masalah besar, yaitu untuk diproduksi masal setiap hari. Dalam kasus tersebut, makin besar cakupan permasalahannya, bantuan mesin makin diperlukan. Di dalam mesin tersebut, terdapat berbagai komponen yang dirangkai sehingga dapat bekerja dengan cara yang mirip dengan manusia bekerja. Sederhananya, dalam topik ini, kita dapat menyebut rangkaian komponen-komponen tersebut sebagai “komputer”.
+                              </p>
+                              <p>
+                                  Komputer banyak dipergunakan dalam kehidupan sehari-hari untuk mempermudah kehidupan, atau membantu penyelesaian berbagai permasalahan yang kita hadapi. Cara kerja komputer menyerupai cara kerja manusia. Pada proses pembuatan biskuit, dengan alat apa pun, tentunya tetap diperlukan bahan dasar tepung, margarin, dan bahan-bahan lainnya. Bahan-bahan tersebut dicampur dan diproses lebih lanjut.
+                              </p>
+                              <p>
+                                  Berpikir komputasional adalah cara berpikir untuk menyelesaikan persoalan, yang cara penyelesaiannya, jika dikembangkan, dapat dilakukan oleh komputer. Dengan demikian, kita akan belajar bagaimana menyelesaikan berbagai persoalan dengan cara yang efektif dan efisien.
+                              </p>
+                              <p>
+                                  Soal-soal pada bab Berpikir Komputasional mencakup berbagai konsep Informatika. Tentunya, konsep-konsep tersebut tidak terbatas pada soal-soal yang disajikan pada materi Berpikir Komputasional pada jenjang kelas 7, 8, dan 9. Maka, peta konsep yang diberikan pada bab ini tidak dapat menggambarkan konsep Berpikir Komputasional secara keseluruhan, tetapi terbatas pada materi yang dibahas pada kelas 7.
+                              </p>
+                              <p>
+                                Menurut kalian, apa arti dari pola? Pola dapat digunakan untuk mendefinisikan sebuah bentuk atau struktur yang tetap. Dalam mengerjakan berbagai kegiatan, terkadang kita harus mengikuti pola atau aturan-aturan tertentu. Misalnya: seorang siswa diperbolehkan mengikuti ujian jika membawa kartu bukti peserta ujian. Atau, seorang peserta pertandingan olahraga diperbolehkan mengikuti pertandingan jika sudah menyerahkan formulir pendaftaran dan lolos dari pemeriksaan kesehatan.
+                              </p>                                                 
                           </div>
                         </div>
                     </div>
+
+                    <!-- Card 8 -->
+                    <div class="card">
+                      <div class="card-header" id="headingEight">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                            Ayo Berdiskusi
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <p>
+                              Kalian dapat secara bergantian menjelaskan cara untuk menyelesaikan soal-soal tersebut. Dari penjelasan kalian, temukan cara yang paling efisien untuk menyelesaikan permasalahan tersebut! Diskusikan juga jawaban kalian bersama guru kalian.
+                          </p>
+                          <p>
+                              Oh ya, apakah kalian sudah memahami perbedaan antara efisien dan efektif? Berikut adalah definisi dari kedua kata tersebut berdasarkan Kamus Besar Bahasa Indonesia:
+                          </p>
+                          <ul>
+                              <li><strong>Efisien:</strong> tepat atau sesuai untuk mengerjakan (menghasilkan) sesuatu (dengan tidak membuang-buang waktu, tenaga, biaya); mampu menjalankan tugas dengan tepat dan cermat; berdaya guna; bertepat guna; sangkil.</li>
+                              <li><strong>Efektif:</strong> ada efeknya (akibatnya, pengaruhnya, kesannya); dapat membawa hasil; berhasil guna (tentang usaha, tindakan); mangkus.</li>
+                          </ul>
+                          <p>
+                              Sebagai contoh, dalam proses pembuatan kue yang dijelaskan pada bagian “Apa itu Berpikir Komputasional”, jika seorang ibu ingin membuat lima buah biskuit dan ia membuatnya dengan mesin pabrik yang seharusnya digunakan untuk membuat ratusan biskuit, prosesnya akan menjadi tidak efisien dan bahkan tidak efektif. Tidak efisien karena penggunaan mesin menjadi berlebihan untuk kasus tersebut. Tidak efektif karena bisa saja dengan penggunaan mesin, tidak ada biskuit yang bisa dihasilkan karena semua adonan biskuit menempel pada mesin tersebut. Untuk menyelesaikan berbagai persoalan, Informatika pada umumnya berusaha mencari solusi yang optimal, yaitu solusi yang efisien dan efektif.
+                          </p>
+                          <h5>Optimasi Penjadwalan</h5>
+                          <p>
+                              Dalam kehidupan sehari-hari, terkadang kita perlu mengatur jadwal untuk berbagai kegiatan. Misalnya, dari pukul 07.00-pukul 12.00, kita sekolah. Setelah sekolah, ada beberapa kegiatan yang bisa kita ikuti, misalnya mengerjakan PR, belajar musik, belajar memasak, bermain bersama teman, dan lainnya. Dengan demikian, kita harus bisa memilih kegiatan mana saja yang akan kita lakukan pada hari tertentu dan tentunya, kita perlu juga mengatur jadwal agar kegiatan-kegiatan tersebut tidak bertabrakan waktunya.
+                          </p>
+                          <p>
+                              Dalam mengatur rangkaian pekerjaan, terkadang ditemukan ada dua atau lebih pekerjaan yang dapat dilakukan secara paralel. Misalnya, ketika kalian akan mengerjakan PR, ibu meminta bantuan kalian untuk mendidihkan air yang berada pada sebuah panci besar. Kalian dapat menyalakan kompor dan menaruh panci berisi air di atas kompor tersebut. Tentunya, kalian tidak perlu menunggu air tersebut sampai mendidih terlebih dahulu baru mulai mengerjakan PR. Kalian bisa mengerjakan PR selagi menunggu air tersebut mendidih. Ingat, jangan keasyikan mengerjakan PR sampai air habis karena terlalu lama mendidih.
+                          </p>
+                                              
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Card 9 -->
+                    <div class="card">
+                      <div class="card-header" id="headingNine">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            Struktur Data
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <div class="img-container">
+                            <img src="/static/assets/img/modul/8 Struktur Data, dftr belanja.png" class="img-fluid" alt="Gambar 2.4">
+                          </div>
+                          <p>
+                            Dalam kehidupan sehari-hari, kalian pasti pernah mengetahui data yang disusun dalam bentuk sebuah daftar (dalam bidang Informatika, biasanya disebut list). Contoh: daftar belanja ibu yang dibawa ketika ibu akan ke pasar, daftar siswa dalam sebuah kelas. Daftar tersebut ada yang memiliki keterurutan dan ada yang tidak. Daftar nama siswa dalam sebuah kelas mungkin terurut berdasarkan alfabet. Daftar belanja ibu mungkin tidak memiliki keterurutan tertentu sehingga tidak menjadi masalah kalau ibu membeli tomat terlebih dahulu sebelum membeli wortel, atau ibu membeli keduanya bersamaan, atau ibu membeli wortel terlebih dahulu sebelum membeli tomat. Dapatkah kalian menyebutkan contoh lain data yang disampaikan dalam bentuk daftar? Apakah contoh daftar yang kalian sebutkan, diurutkan berdasarkan aturan tertentu?
+                        </p>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Card 10 -->
+                    <div class="card">
+                      <div class="card-header" id="headingTen">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                            Representasi Data
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <div class="img-container">
+                            <img src="/static/assets/img/modul/daata.jpg" class="img-fluid" alt="Gambar 2.4">
+                          </div>
+                          <p>
+                            Dalam kehidupan sehari-hari, sering kali kita dihadapkan pada banyak pilihan. Pilihannya bisa terdiri atas dua kemungkinan atau lebih. Jika hanya terdiri atas dua kemungkinan, biasanya jawabannya adalah ya atau tidak. Sebagai contoh: Apakah hari ini kalian sarapan roti? Jawabannya ialah ya atau tidak. Apakah kemarin turun hujan? Pertanyaan tersebut tentu berbeda dengan pertanyaan: Apa warna kesukaan kalian? Pertanyaan mengenai warna kesukaan tidak dapat dijawab dengan ya atau tidak. Jika pertanyaannya diubah menjadi “Apakah warna kesukaan kalian adalah biru?”, pertanyaan tersebut dapat dijawab dengan ya atau tidak. Dapatkah kalian menyebutkan contoh pertanyaan lain yang peluang jawabannya pada umumnya adalah ya atau tidak?
+                        </p>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  
 
                     <div class="card">
                         <div class="card-header" id="headingFive">
@@ -380,7 +508,7 @@
                                   </tr>
                                   <tr>
                                       <td>Nama:</td>
-                                      <td><input class="form-control" type="text" id="nama" name="nama"></td>
+                                      <td><input class="form-control" type="text" id="eval_nama" name="eval_nama"></td>
                                   </tr>
                                   <tr>
                                       <td>Kelas:</td>
@@ -462,14 +590,15 @@
                                 </textarea>
                                 <br>
 
-                                <button type="submit" class="btn btn-primary mt-3">SUBMIT</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                 <!-- Konten Kosong -->
                               </form>
                             </div>
                           </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>      
+                      
                       <div class="card">
                         <div class="card-header" id="headingSix">
                             <h2 class="mb-0">
@@ -510,7 +639,7 @@
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </section>
     </main>
