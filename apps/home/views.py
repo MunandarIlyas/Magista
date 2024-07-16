@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from apps.home.models import Quiz, Kelas
+from apps.home.models import Quiz, Kelas, Evaluasi
 from .forms import EvaluasiForm
 import json
 
@@ -110,7 +110,32 @@ def eval_submission(request):
         return JsonResponse({'error': 'Metode yang diperbolehkan adalah POST.'}, status=405)
     
 def save_eval_data(jawaban):
+    try:
+        grup_instance = Kelas.objects.get(id=jawaban['kelas'])
+        print("ADA")
+    except Kelas.DoesNotExist:
+        return {"error": "Grup with the provided ID does not exist."}
+    
+    evaluasi = Evaluasi.objects.create(
+        nama=jawaban['nama'],
+        grup=grup_instance,
+        jawaban1=jawaban['jawaban1'],
+        skor1=0,
+        jawaban2=jawaban['jawaban2'],
+        skor2=0,
+        jawaban3=jawaban['jawaban3'],
+        skor3=0,
+        jawaban4=jawaban['jawaban4'],
+        skor4=0,
+        jawaban5=jawaban['jawaban5'],
+        skor5=0,
+        jawaban6=jawaban['jawaban6'],
+        skor6=0,
+    )
+
+    
     print(jawaban)
+    print("NGENS")
 
 
 #QUISS
@@ -183,7 +208,7 @@ def buat_hasil(jawaban, skor):
         jawaban_soal_3=jawaban['Jawaban Soal 3'],
         jawaban_soal_4=jawaban['Jawaban Soal 4'],
         jawaban_soal_5=jawaban['Jawaban Soal 5'],
-        skor=skor  # Contoh skor
+        skor=skor 
     )
 
     return hasil
@@ -223,6 +248,29 @@ def quiz_list(request):
     
     # Kirim data dalam bentuk JSON sebagai respons
     return JsonResponse(quiz_data, safe=False)
+
+def eval_list(request):
+    # Ambil semua objek Quiz dari database
+    eval_objects = Evaluasi.objects.all()
+    
+    # Buat list yang berisi dictionary untuk setiap objek Quiz
+    eval_data = [
+        {
+            'id': data.id,
+            'nama': data.nama,
+            'kelas': data.grup.nama_kelas,  # Mengambil nama_kelas dari objek Kelas
+            'jawaban1': data.jawaban1,
+            'jawaban2': data.jawaban2,
+            'jawaban3': data.jawaban3,
+            'jawaban4': data.jawaban4,
+            'jawaban5': data.jawaban5,
+            'jawaban6': data.jawaban6,
+        } 
+        for data in eval_objects
+    ]
+    
+    # Kirim data dalam bentuk JSON sebagai respons
+    return JsonResponse(eval_data, safe=False)
 
 
 

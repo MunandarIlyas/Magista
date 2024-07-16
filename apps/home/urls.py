@@ -16,6 +16,7 @@ urlpatterns = [
     path('eval_submission/', views.eval_submission, name='eval_submission'),
     path('kelas_list/', views.kelas_list, name='kelas-list'),
     path('quiz_list/', views.quiz_list, name='quiz_list'),
+    path('eval_list/', views.eval_list, name='eval_list'),
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),
 

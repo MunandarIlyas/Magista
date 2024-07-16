@@ -110,6 +110,10 @@ document
         var response = JSON.parse(xhr.responseText);
         console.log(response);
 
+        // Membuat elemen dengan ID 'donekuis' muncul setelah formulir dikirim
+        document.getElementById("doneEval").style.display = "block";
+        document.getElementById("Eval").style.display = "none";
+
         // // Membuat elemen dengan ID 'donekuis' muncul setelah formulir dikirim
         // document.getElementById("donekuis").style.display = "block";
         // document.getElementById("kuis").style.display = "none";

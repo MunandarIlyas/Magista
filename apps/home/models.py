@@ -31,7 +31,7 @@ class Quiz(models.Model):
 class Evaluasi(models.Model):
     id = models.BigAutoField(primary_key=True)
     nama = models.CharField(max_length=100)
-    grup = models.ForeignKey('Kelas', on_delete=models.CASCADE)
+    grup = models.ForeignKey(Kelas, on_delete=models.CASCADE)
     jawaban1 = models.CharField(max_length=100)
     skor1 = models.IntegerField()
     jawaban2 = models.CharField(max_length=100)
