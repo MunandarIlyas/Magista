@@ -21,6 +21,28 @@
     <link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
     <style>
 
+        /* Custom CSS */
+.text-light-underline {
+    text-decoration: underline;
+    text-decoration-color: #D3D3D3; /* Light grey color */
+    text-decoration-thickness: 2px; /* Optional: adjust thickness */
+}
+
+/* Custom CSS for text with 1rem font size and bold weight */
+.text-custom {
+    font-size: 1rem; /* Set font size to 1rem */
+    font-weight: bold; /* Make the text bold */
+    padding-left: 30px;
+}
+
+.catatan {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.7rem; /* Set font size to 0.7rem */
+    font-style: italic; /* Apply italic style */
+}
+
+
         .text-indent {
             text-indent: 3em;
             text-align: justify;
@@ -115,13 +137,23 @@
               <div class="navbar-collapse mt-5" id="navbar_global" style="background-color: #1f2937;">   
                   <ul class="navbar-nav">
                       <li class="nav-item me-2">
-                          <i><a href="/index.html" class="nav-link title">MasDigta!!!</a></i>
+                          <i><a href="/index.html" class="nav-link title"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" fill="currentColor" font-style="italic" font-weight="bold">
+                                M
+                            </text>
+                        </svg>asDigta!!!</a></i>
                       </li>
                       <li class="nav-item me-2">
-                          <a href="/dashboard.html" class="nav-link">Dashboard</a>
+                        <a href="/dashboard.html" class="nav-link">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3h8v8H3V3zm10 0h8v8h-8V3zm-10 10h8v8H3v-8zm10 0h8v8h-8v-8z" fill="currentColor"/>
+                        </svg>   Dashboard</a>
                       </li>
                       <li class="nav-item me-2">
-                          <a href="/computational-thinking.html" class="nav-link">Jelajahi Materi</a>
+                          <a href="/computational-thinking.html" class="nav-link text-light-underline">
+                            <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21 4H13a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-9 0H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h9V5zm-1 14H4V6h7v12zM20 18h-7V6h7v12z"/>
+                          </svg>   Jelajahi Materi</a>
                       </li>
                   </ul>
                   <div class="d-flex align-items-center ms-auto">
@@ -177,7 +209,12 @@
                       <div class="card-header" id="heading">
                         <h2 class="mb-0">
                           <div class="dropdown">
-                            <button class="btn">Cari Materi</button>
+                            <button class="btn"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11 2a9 9 0 1 0 6.303 15.303l5.825 5.825a1 1 0 0 0 1.414-1.414l-5.825-5.825A9 9 0 0 0 11 2zM11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z" 
+                                    fill="#262B40" 
+                                    stroke="#262B40" 
+                                    stroke-width="2"/>
+                          </svg><label class="text-custom">Cari Materi</label></button>
                             <div class="dropdown-content">
                                 <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="focusContent('collapseOne')">Apa itu Berpikir Komputasional?</a>
                                 <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="focusContent('collapseTwo')">Dekomposisi, Pengenalan pola, Abstraksi dan Algoritma</a>
@@ -198,7 +235,10 @@
                       <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                           <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Apa Itu Berpikir Komputasional?
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9S16.97 3 12 3zm-2 14.5c-.75 0-1.41-.31-1.88-.81-.37-.39-.62-.91-.62-1.5s.25-1.11.62-1.5c.47-.5 1.13-.81 1.88-.81s1.41.31 1.88.81c.37.39.62.91.62 1.5s-.25 1.11-.62 1.5c-.47.5-1.13.81-1.88.81zM12 7c-.75 0-1.41.31-1.88.81-.37.39-.62.91-.62 1.5s.25 1.11.62 1.5c.47.5 1.13.81 1.88.81s1.41-.31 1.88-.81c.37-.39.62-.91.62-1.5s-.25-1.11-.62-1.5c-.47-.5-1.13-.81-1.88-.81zM15 12c-.75 0-1.41-.31-1.88-.81-.37-.39-.62-.91-.62-1.5s.25-1.11.62-1.5c.47-.5 1.13-.81 1.88-.81s1.41.31 1.88.81c.37.39.62.91.62 1.5s-.25 1.11-.62 1.5c-.47.5-1.13.81-1.88.81z" 
+                                    fill="#262B40"/>
+                          </svg><label class="text-custom">Apa Itu Berpikir Komputasional?</label>
                           </button>
                         </h2>
                       </div>
@@ -241,7 +281,11 @@
                       <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
                           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Dekomposisi, Pengenalan pola, Abstraksi dan Algoritma 
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <line x1="2" y1="6" x2="22" y2="6" stroke="#262B40" stroke-width="2"/>
+                              <line x1="2" y1="12" x2="22" y2="12" stroke="#262B40" stroke-width="2"/>
+                              <line x1="2" y1="18" x2="22" y2="18" stroke="#262B40" stroke-width="2"/>
+                          </svg><label class="text-custom">Dekomposisi, Pengenalan pola, Abstraksi dan Algoritma</label>
                           </button>
                         </h2>
                       </div>
@@ -271,7 +315,23 @@
                       <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
                           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Algoritma
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <!-- Frame -->
+                              <rect x="0" y="0" width="24" height="24" fill="none" stroke="#262B40" stroke-width="1"/>
+                              
+                              <!-- Number 1 -->
+                              <text x="4" y="16" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  1
+                              </text>
+                              <!-- Number 2 -->
+                              <text x="10" y="16" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  2
+                              </text>
+                              <!-- Number 3 -->
+                              <text x="16" y="16" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  3
+                              </text>
+                          </svg><label class="text-custom">Algoritma</label>
                           </button>
                         </h2>
                       </div>
@@ -319,7 +379,15 @@
                         <div class="card-header" id="headingFour">
                           <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Optimasi Penjadwalan
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circle Background -->
+                                <circle cx="12" cy="12" r="10" fill="#262B40"/>
+                                
+                                <!-- Dots -->
+                                <circle cx="5" cy="8" r="2" fill="#FFFFFF"/>
+                                <circle cx="5" cy="12" r="2" fill="#FFFFFF"/>
+                                <circle cx="5" cy="16" r="2" fill="#FFFFFF"/>
+                            </svg><label class="text-custom">Optimasi Penjadwalan</label>
                             </button>
                           </h2>
                         </div>
@@ -360,7 +428,20 @@
                       <div class="card-header" id="headingEight">
                         <h2 class="mb-0">
                           <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                            Struktur Data
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <!-- Letter A -->
+                              <text x="4" y="18" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  A
+                              </text>
+                              <!-- Letter B -->
+                              <text x="10" y="18" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  B
+                              </text>
+                              <!-- Letter C -->
+                              <text x="16" y="18" font-family="Arial, sans-serif" font-size="12" fill="#262B40" font-weight="bold">
+                                  C
+                              </text>
+                          </svg><label class="text-custom">Struktur Data</label>
                           </button>
                         </h2>
                       </div>
@@ -386,13 +467,29 @@
                         <div class="card-header" id="headingFive">
                           <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                              KUIS
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circle Background -->
+                                <circle cx="12" cy="12" r="10" fill="#262B40"/>
+                                
+                                <!-- Question Mark -->
+                                <text x="6" y="16" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold">
+                                    ?
+                                </text>
+                            </svg><label class="text-custom">Kuis</label>
                             </button>
                           </h2>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                           <div class="card-body">
                             <div class="container mt-5">
+                              <div id="pra-kuis">
+                                <label for="nama">Kode Kuis</label>
+                                <br>
+                                <input type="text" class="form-control" id="kode_kuis" placeholder="Masukkan Kode untuk Kuis" required maxlength="20">
+                                <br>
+                                <button id="kode" class="btn btn-primary">Mulai Kuis</button>
+                                <br><br>
+                              </div>
                               <div id="kuis">
                                 <div class="row justify-content-center">
                                   <div class="col-md-6 scrollable-div">
@@ -556,7 +653,15 @@
                         <div class="card-header" id="headingEmpty">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEmpty" aria-expanded="false" aria-controls="collapseEmpty">
-                                    Evaluasi Kompetensi
+                                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Circle Background -->
+                                    <circle cx="12" cy="12" r="10" fill="#262B40"/>
+                                    
+                                    <!-- Exclamation Mark -->
+                                    <text x="12" y="16" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">
+                                        !
+                                    </text>
+                                </svg><label class="text-custom">Evaluasi Kompetensi</label>
                                 </button>
                             </h2>
                         </div>
@@ -567,7 +672,15 @@
                                   <div id="doneEval" style="display: none;">
                                     <h3>Anda Telah Menyelesaikan Evaluasi</h3>
                                   </div>
-                             <div class="Eval">
+                                  <div id="pra-eval">
+                                    <label for="nama">Kode Evaluasi</label>
+                                    <br>
+                                    <input type="text" class="form-control" id="kode_eval" placeholder="Masukkan Kode untuk Evaluasi" required>
+                                    <br>
+                                    <button id="kode_evaluasi" class="btn btn-primary">Mulai Evaluasi Kompetensi</button>
+                                    <br><br>
+                                  </div>
+                             <div id="eval" class="Eval">
                               <form id="evalForm">
                                 <table class="table table-bordered table-striped">
                                   <tr>
@@ -580,7 +693,7 @@
                                   </tr>
                                   <tr>
                                       <td>Nama:</td>
-                                      <td><input class="form-control" type="text" id="eval_nama" name="eval_nama"></td>
+                                      <td><input class="form-control" type="text" id="eval_nama" name="eval_nama" required maxlength="20"></td>
                                   </tr>
                                   <tr>
                                       <td>Kelas:</td>
@@ -603,7 +716,8 @@
                                 <img src="/static/assets/img/evaluasi/Picture2.png" alt="image"><br><br><br>
                                 <h5>Pertanyaan</h5>
                                 <p>Jelaskan Berapa langkah minimum untuk mengurut seluruh 9 buku ?</p>
-                                <textarea id="jawaban1" class="form-control" rows="5" required>
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban1" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -612,7 +726,8 @@
 
                                 <h5>Pertanyaan</h5>
                                 <p>Ada berapa proses pertukaran posisi minimum yang terjadi pada soal di atas dan JELASKAN!</p>
-                                <textarea id="jawaban2" class="form-control" rows="5" required>
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban2" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -622,7 +737,8 @@
                                 <img src="/static/assets/img/evaluasi/Picture3.png" alt="image"><br><br><br>
                                 <h5>Pertanyaan</h5>
                                 <p>Berapa jumlah minimum komputer yang dibutuhkan supaya mereka dapat bekerja sesuai dengan tabel di atas?</p>
-                                <textarea id="jawaban3" class="form-control" rows="5" required>
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban3" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -634,7 +750,8 @@
                                 <h5>Pertanyaan</h5>
 
                                 <p>Berapa banyak tempat parkir yang tidak pernah terisi mobil pada hari Senin maupun hari Selasa? JELASKAN</p>
-                                <textarea id="jawaban4" class="form-control" rows="5" required>
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban4" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -646,7 +763,8 @@
                                 <img src="/static/assets/img/evaluasi/Picture7.png" alt="image"><br><br>
                                 <h5>Pertanyaan</h5>
                                 <p>Mobil siapa yang akan diparkir di jalanan pada akhir hari Jumat? JELASKAN</p>
-                                <textarea id="jawaban5" class="form-control" rows="5" required>
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban5" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -657,7 +775,9 @@
                                 <p>Bila karung-karung dari barisan awal telah diambil, hal yang sama kemudian dilakukan pada barisan karung yang terbentuk pada koridor arah berlawanan dengan semula hingga seluruh karung di situ berhasil dikirim ke toko atau dipindah ke ujung koridor berlawanan dengannya. Hal itu terus-menerus dilakukan sampai semua karung berhasil dikirim ke toko.</p>
                                 <h5>Pertanyaan</h5>
                                 <p>Sampai semua karung dikirimkan ke toko dengan prosedur tersebut di atas, berapa kali lift turun-naik mengangkut karung-karung itu semula karung-karung ada seperti pada gambar di atas dengan berat masing-masing seperti yang tercantum pada setiap karung? JELASKAN</p>
-                                <textarea id="jawaban6" class="form-control" rows="5" required>
+                                
+                                <label class="catatan">*Isi Jawaban dengan Panjang Masksimal 500 Karakter</label>
+                                <textarea id="jawaban6" class="form-control" rows="5" required maxlength="500">
 
                                 </textarea>
                                 <br>
@@ -677,7 +797,7 @@
                         <div class="card-header" id="headingSix">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Video Edukasi Computational Thinking
+                                  <label class="text-custom">Video Edukasi</label>
                                 </button>
                             </h2>
                         </div>
@@ -743,11 +863,11 @@
                       <div class="card-header" id="headingOneHundred">
                           <h2 class="mb-0">
                               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneHundred" aria-expanded="true" aria-controls="collapseOneHundred">
-                                  Daftar Referensi
+                                <label class="text-custom">Daftar Referensi</label>
                               </button>
                           </h2>
                       </div>
-                      <div id="collapseOneHundred" class="collapse show" aria-labelledby="headingOneHundred" data-parent="#accordionExample">
+                      <div id="collapseOneHundred" class="collapse" aria-labelledby="headingOneHundred" data-parent="#accordionExample">
                           <div class="card-body">
                               <!-- Empty card content -->
                               <h4 class="table-title">Daftar Referensi</h4>
@@ -867,8 +987,11 @@
     </footer>
     <!-- Quis JS -->
     <script src="/static/assets/js/quiz.js"></script>
+    <script src="https://kit.fontawesome.com/1606f14808.js" crossorigin="anonymous"></script>
     
     <script>
+      document.getElementById('kuis').style.display = 'none';
+      document.getElementById('eval').style.display = 'none';
       // Ambil data dari endpoint
       fetch('/kelas_list/')
           .then(response => response.json())
@@ -899,6 +1022,26 @@
               document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 500); // Delay to allow collapse animation to complete
       }
+    
+      document.getElementById('kode').addEventListener('click', function() {
+            var kodeInput = document.getElementById('kode_kuis').value.trim();
+            if (kodeInput === 'belajarkomputasi') {
+                document.getElementById('pra-kuis').style.display = 'none'; // Hide the code entry section
+                document.getElementById('kuis').style.display = 'block'; // Show the quiz section
+            } else {
+                alert('Kode yang Anda masukkan salah. Silakan coba lagi.');
+            }
+        });
+
+        document.getElementById('kode_evaluasi').addEventListener('click', function() {
+            var kodeInput = document.getElementById('kode_eval').value.trim();
+            if (kodeInput === 'belajarkomputasi') {
+                document.getElementById('pra-eval').style.display = 'none'; // Hide the code entry section
+                document.getElementById('eval').style.display = 'block'; // Show the quiz section
+            } else {
+                alert('Kode yang Anda masukkan salah. Silakan coba lagi.');
+            }
+        });
     </script>
 </body>
 </html>

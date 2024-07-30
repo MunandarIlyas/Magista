@@ -131,6 +131,12 @@
         text-align: justify;
       }
 
+      .text-light-underline {
+    text-decoration: underline;
+    text-decoration-color: #D3D3D3; /* Light grey color */
+    text-decoration-thickness: 2px; /* Optional: adjust thickness */
+}
+
       .title {
         font-size: 1.3em; /* Mengatur ukuran font menjadi besar, bisa disesuaikan sesuai kebutuhan */
         font-style: italic; /* Mengatur teks menjadi miring */
@@ -165,18 +171,24 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item me-2">
-                <i
-                  ><a href="/index.html" class="nav-link title"
-                    >MasDigta!!!</a
-                  ></i
-                >
-              </li>
-              <li class="nav-item me-2">
-                <a href="/dashboard.html" class="nav-link">Dashboard</a>
-              </li>
-              <li class="nav-item me-2">
-                <a href="/computational-thinking.html" class="nav-link">Jelajahi Materi</a>
-              </li>
+                <i><a href="/index.html" class="nav-link title text-light-underline"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" fill="currentColor" font-style="italic" font-weight="bold">
+                      M
+                  </text>
+              </svg>asDigta!!!</a></i>
+            </li>
+            <li class="nav-item me-2">
+              <a href="/dashboard.html" class="nav-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3h8v8H3V3zm10 0h8v8h-8V3zm-10 10h8v8H3v-8zm10 0h8v8h-8v-8z" fill="currentColor"/>
+              </svg>   Dashboard</a>
+            </li>
+            <li class="nav-item me-2">
+                <a href="/computational-thinking.html" class="nav-link">
+                  <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 4H13a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-9 0H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h9V5zm-1 14H4V6h7v12zM20 18h-7V6h7v12z"/>
+                </svg>   Jelajahi Materi</a>
+            </li>
               <!-- <li class="nav-item me-2">
                             <a href="/page-sign-in.html" class="nav-link">Login</a>
                         </li> -->
